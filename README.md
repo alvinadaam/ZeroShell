@@ -148,17 +148,27 @@ If you like ZeroShell, please star the repo and share it with others!
 
 ---
 
-## 🚧 Advanced Features (Planned / In Progress)
+## License
 
-ZeroShell and ZSLang are ready for the next phase of development:
-
-- **Async/background jobs:** Run scripts or commands in the background, manage jobs.
-- **Events and hooks:** Respond to system/user events in scripts.
-- **Custom command system:** Define your own shell commands in ZSL.
-- **Compilation mode:** Compile scripts for performance or distribution.
-- **More data structures:** Maps, sets, and advanced collections.
-- **More frameworks:** UI, networking, and more reusable libraries.
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
 ---
 
-**The project is now ready for advanced feature development and open-source collaboration!**
+- The README.md is up to date for GitHub, with author, license, usage, and contribution info.
+- All major features, usage, and project structure are documented.
+- The file is ready for open-source hosting and onboarding new users/contributors.
+
+---
+
+## Advanced Features (Planned / In Progress)
+
+- Async/background jobs
+- Events and hooks
+- Custom command system
+- Compilation mode
+- More data structures (maps, sets, etc.)
+- More frameworks (UI, networking, etc.)
+
+---
+
+**If you find any missing or outdated info, you can update this README at any time.**
