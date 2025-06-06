@@ -137,8 +137,14 @@ You may use, modify, and distribute this project for personal, educational, or c
 
 ## 🤝 Contributing
 
-Pull requests, issues, and suggestions are welcome!  
-See `CONTRIBUTING.md` (if present) or open an issue on GitHub.
+We welcome contributions, ideas, and feedback from everyone!
+
+- Open an issue on GitHub for bugs, feature requests, or questions.
+- Submit a pull request to propose code changes or improvements.
+- For major changes, please discuss them in an issue first.
+- If you have suggestions for documentation or examples, feel free to update the README or add files.
+
+**Let's build ZeroShell together!**
 
 ---
 
