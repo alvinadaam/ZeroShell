@@ -7,18 +7,43 @@ All previous language features, syntax, and documentation are deprecated until t
 
 ---
 
-## ⚠️ Status
+## ⚡️ New ZSLang Engine Structure
 
-- The ZSLang interpreter and all related files have been cleared for a full redesign and rewrite.
-- All previous documentation, examples, and features are out of date.
-- Please do not rely on any ZSLang features until the new engine is complete.
+```
+zslang/
+  engine/
+    index.js         # Main entry point, exports runZSL (ES6)
+    parser.js        # Tokenizer and parser for ZSLang
+    ast.js           # AST node definitions and helpers (planned)
+    interpreter.js   # Main interpreter (core logic)
+    stdlib/          # Built-in functions, math, string, array, etc.
+      math.js
+      string.js
+      array.js
+    runtime.js       # Runtime helpers, environment, variable scope (planned)
+    errors.js        # Error types and error handling (planned)
+    types.js         # Type system (planned)
+    utils.js         # Utility functions (planned)
+  tests/
+    ...              # ZSLang unit tests and script samples
+```
+
+---
+
+## ✅ Minimal Working Example
+
+- Only `print` statements are supported for now.
+- Example:
+  ```
+  print "Hello, ZeroShell!"
+  ```
 
 ---
 
 ## Next Steps
 
-- Design and implement a new ZSLang interpreter and language core.
-- Update this README with new syntax, features, and examples as development progresses.
+- Expand parser and interpreter for variables, math, control flow, etc.
+- Add tests and documentation as features are added.
 
 ---
 
