@@ -8,7 +8,7 @@ A modern, browser-based virtual shell, file system, and scripting environment wi
 
 - **Virtual File System (VFS):** Hierarchical, in-memory, supports files, directories, metadata, permissions, and modules.
 - **CLI Shell:** Realistic prompt, command history, tab-completion, aliases, chaining, and scripting.
-- **File Operations:** `ls`, `cd`, `cat`, `mkdir`, `touch`, `rm`, `rmdir`, `mv`, `cp`, `find`, `tree`, `pwd`, `chmod`, `stat`, `history`, `clear`, `help`, `shutdown`, `whoami`, `su`, `date`, and more.
+- **File Operations:** `ls`, `cd`, `cat`, `mkdir`, `touch`, `rm`, `rmdir`, `mv`, `cp`, `find`, `tree`, `pwd`, `chmod`, `stat`, `history`, `clear`, `help`, `shutdown`, `whoami`, `su`, `date`, `tour`, and more.
 - **Tab Completion:** Context-aware, supports files, directories, and extensions for all relevant commands.
 - **File Editor:** Popup modal for editing files with keyboard shortcuts, accessibility, and autosave.
 - **File Viewer/Preview:** Popup modal for viewing text and images (PNG/JPG/GIF as base64).
@@ -121,7 +121,7 @@ For detailed documentation, tutorials, and examples, visit the [ZeroShell Wiki](
 ## 📢 Legal & Usage
 
 ZeroShell is free and open-source software released under the MIT License.  
-You may use, modify, and distribute this project for personal, educational, or commercial purposes, provided you retain the copyright notice.
+You may use, modify, and distribute this project for personal, educational, or commercial purposes, provided you retain the copyright.
 
 ---
 
@@ -145,3 +145,20 @@ See `CONTRIBUTING.md` (if present) or open an issue on GitHub.
 ## ⭐️ Star & Share
 
 If you like ZeroShell, please star the repo and share it with others!
+
+---
+
+## 🚧 Advanced Features (Planned / In Progress)
+
+ZeroShell and ZSLang are ready for the next phase of development:
+
+- **Async/background jobs:** Run scripts or commands in the background, manage jobs.
+- **Events and hooks:** Respond to system/user events in scripts.
+- **Custom command system:** Define your own shell commands in ZSL.
+- **Compilation mode:** Compile scripts for performance or distribution.
+- **More data structures:** Maps, sets, and advanced collections.
+- **More frameworks:** UI, networking, and more reusable libraries.
+
+---
+
+**The project is now ready for advanced feature development and open-source collaboration!**
