@@ -1,0 +1,261 @@
+{
+  "type": "dir",
+  "name": "/",
+  "created": "2024-06-01T12:00:00Z",
+  "modified": "2024-06-01T12:00:00Z",
+  "permissions": { "admin": 3, "user": 3, "all": 3 },
+  "children": {
+    "bin": {
+      "type": "dir",
+      "name": "bin",
+      "created": "2024-06-01T12:10:00Z",
+      "modified": "2024-06-01T12:10:00Z",
+      "permissions": { "admin": 3, "user": 3, "all": 1 },
+      "children": {
+        "echo.exe": {
+          "type": "file",
+          "name": "echo.exe",
+          "created": "2024-06-01T12:11:00Z",
+          "modified": "2024-06-01T12:11:00Z",
+          "size": 0,
+          "content": "",
+          "permissions": { "admin": 3, "user": 1, "all": 1 }
+        },
+        "calc.exe": {
+          "type": "file",
+          "name": "calc.exe",
+          "created": "2024-06-01T12:12:00Z",
+          "modified": "2024-06-01T12:12:00Z",
+          "size": 0,
+          "content": "",
+          "permissions": { "admin": 3, "user": 1, "all": 1 }
+        }
+      }
+    },
+    "etc": {
+      "type": "dir",
+      "name": "etc",
+      "created": "2024-06-01T12:20:00Z",
+      "modified": "2024-06-01T12:20:00Z",
+      "permissions": { "admin": 3, "user": 3, "all": 1 },
+      "children": {
+        "config.txt": {
+          "type": "file",
+          "name": "config.txt",
+          "created": "2024-06-01T12:21:00Z",
+          "modified": "2024-06-01T12:21:00Z",
+          "size": 34,
+          "content": "system_mode=demo\nuser=guest\ntimezone=UTC",
+          "permissions": { "admin": 3, "user": 1, "all": 1 }
+        },
+        "motd.txt": {
+          "type": "file",
+          "name": "motd.txt",
+          "created": "2025-06-05T18:00:00.000Z",
+          "modified": "2025-06-05T18:00:00.000Z",
+          "size": 20,
+          "content": "Welcome to ZeroShell!",
+          "permissions": { "admin": 3, "user": 3, "all": 3 }
+        }
+      }
+    },
+    "home": {
+      "type": "dir",
+      "name": "home",
+      "created": "2024-06-01T12:30:00Z",
+      "modified": "2024-06-01T12:30:00Z",
+      "permissions": { "admin": 3, "user": 3, "all": 1 },
+      "children": {
+        "guest": {
+          "type": "dir",
+          "name": "guest",
+          "created": "2024-06-01T12:31:00Z",
+          "modified": "2024-06-01T12:31:00Z",
+          "permissions": { "admin": 3, "user": 3, "all": 1 },
+          "children": {
+            "notes.txt": {
+              "type": "file",
+              "name": "notes.txt",
+              "created": "2024-06-01T12:32:00Z",
+              "modified": "2024-06-01T12:32:00Z",
+              "size": 25,
+              "content": "Welcome to your home folder!",
+              "permissions": { "admin": 3, "user": 3, "all": 1 }
+            },
+            "photo.jpg": {
+              "type": "file",
+              "name": "photo.jpg",
+              "created": "2024-06-01T12:33:00Z",
+              "modified": "2024-06-01T12:33:00Z",
+              "size": 0,
+              "content": "",
+              "permissions": { "admin": 3, "user": 1, "all": 1 }
+            },
+            "hello.zs": {
+              "type": "file",
+              "name": "hello.zs",
+              "created": "2025-06-05T18:01:00.000Z",
+              "modified": "2025-06-05T18:01:00.000Z",
+              "size": 28,
+              "content": "print \"Hello from ZeroShell!\"",
+              "permissions": { "admin": 3, "user": 3, "all": 3 }
+            },
+            "calc.zs": {
+              "type": "file",
+              "name": "calc.zs",
+              "created": "2025-06-05T18:01:30.000Z",
+              "modified": "2025-06-05T18:01:30.000Z",
+              "size": 58,
+              "content": "let x = 5\nlet y = 7\nlet z = x + y\nprint \"Sum is:\"\nprint z",
+              "permissions": { "admin": 3, "user": 3, "all": 3 }
+            }
+          }
+        }
+      }
+    },
+    "usr": {
+      "type": "dir",
+      "name": "usr",
+      "created": "2024-06-01T12:40:00Z",
+      "modified": "2024-06-01T12:40:00Z",
+      "permissions": { "admin": 3, "user": 3, "all": 1 },
+      "children": {
+        "share": {
+          "type": "dir",
+          "name": "share",
+          "created": "2024-06-01T12:41:00Z",
+          "modified": "2024-06-01T12:41:00Z",
+          "permissions": { "admin": 3, "user": 3, "all": 1 },
+          "children": {
+            "readme.txt": {
+              "type": "file",
+              "name": "readme.txt",
+              "created": "2024-06-01T12:42:00Z",
+              "modified": "2024-06-01T12:42:00Z",
+              "size": 20,
+              "content": "Shared resources folder.",
+              "permissions": { "admin": 3, "user": 3, "all": 1 }
+            },
+            "loop.zs": {
+              "type": "file",
+              "name": "loop.zs",
+              "created": "2025-06-05T18:02:00.000Z",
+              "modified": "2025-06-05T18:02:00.000Z",
+              "size": 49,
+              "content": "for i = 1 to 5\n  print \"i=\"\n  print i\nend",
+              "permissions": { "admin": 3, "user": 3, "all": 3 }
+            }
+          }
+        }
+      }
+    },
+    "hello.txt": {
+      "type": "file",
+      "name": "hello.txt",
+      "created": "2024-06-01T12:50:00Z",
+      "modified": "2024-06-01T12:50:00Z",
+      "size": 13,
+      "content": "Hello, world!",
+      "permissions": { "admin": 3, "user": 3, "all": 1 }
+    },
+    "testdir": {
+      "type": "dir",
+      "name": "testdir",
+      "created": "2025-06-05T18:03:00.000Z",
+      "modified": "2025-06-05T18:03:00.000Z",
+      "permissions": { "admin": 3, "user": 3, "all": 3 },
+      "children": {
+        "test.txt": {
+          "type": "file",
+          "name": "test.txt",
+          "created": "2025-06-05T18:03:10.000Z",
+          "modified": "2025-06-05T18:03:10.000Z",
+          "size": 12,
+          "content": "Test content",
+          "permissions": { "admin": 3, "user": 3, "all": 3 }
+        },
+        "test.zs": {
+          "type": "file",
+          "name": "test.zs",
+          "created": "2025-06-05T18:03:20.000Z",
+          "modified": "2025-06-05T18:03:20.000Z",
+          "size": 62,
+          "content": "let n = 3\nfor i = 1 to n\n  print \"Loop:\"\n  print i\nend",
+          "permissions": { "admin": 3, "user": 3, "all": 3 }
+        }
+      }
+    },
+    "zslang": {
+      "type": "dir",
+      "name": "zslang",
+      "created": "2025-06-06T12:00:00Z",
+      "modified": "2025-06-06T12:00:00Z",
+      "permissions": { "admin": 3, "user": 3, "all": 3 },
+      "children": {
+        "mathlib.zs": {
+          "type": "file",
+          "name": "mathlib.zs",
+          "created": "2025-06-06T12:01:00Z",
+          "modified": "2025-06-06T12:01:00Z",
+          "size": 400,
+          "content": "# mathlib.zs - Advanced math helpers for ZSL\n\nfunc add a b\n  return a + b\nend\n\nfunc sub a b\n  return a - b\nend\n\nfunc mul a b\n  return a * b\nend\n\nfunc div a b\n  if b == 0\n    return 0\n  end\n  return a / b\nend\n\nfunc mod a b\n  return a % b\nend\n\nfunc max a b\n  if a > b\n    return a\n  end\n  return b\nend\n\nfunc min a b\n  if a < b\n    return a\n  end\n  return b\nend\n\nfunc abs x\n  if x < 0\n    return 0 - x\n  end\n  return x\nend\n\nfunc pow a b\n  let r = 1\n  for i = 1 to b\n    let r = r * a\n  end\n  return r\nend\n\nfunc clamp x lo hi\n  if x < lo\n    return lo\n  end\n  if x > hi\n    return hi\n  end\n  return x\nend\n\nfunc avg a b\n  return (a + b) / 2\nend\n\nfunc lerp a b t\n  return a + (b - a) * t\nend\n\nfunc sign x\n  if x > 0\n    return 1\n  end\n  if x < 0\n    return -1\n  end\n  return 0\nend",
+          "permissions": { "admin": 3, "user": 3, "all": 3 }
+        },
+        "gfxlib.zs": {
+          "type": "file",
+          "name": "gfxlib.zs",
+          "created": "2025-06-06T12:01:10Z",
+          "modified": "2025-06-06T12:01:10Z",
+          "size": 350,
+          "content": "# gfxlib.zs - Advanced graphics helpers for ZSL\n\nfunc drawBox x y w h r g b\n  gfx.drawRect x y w h r g b\nend\n\nfunc drawPixel x y r g b\n  gfx.setPixel x y r g b\nend\n\nfunc drawText txt x y\n  gfx.text txt x y 16 255 255 255\nend\n\nfunc drawTextColor txt x y r g b\n  gfx.text txt x y 16 r g b\nend\n\nfunc clearScreen\n  gfx.clear 0 0 0\nend\n\nfunc drawCircle x y radius r g b\n  gfx.drawCircle x y radius r g b\nend\n\nfunc drawLine x1 y1 x2 y2 r g b\n  gfx.drawLine x1 y1 x2 y2 r g b\nend\n\nfunc fillScreen r g b\n  gfx.clear r g b\nend\n\nfunc drawFrame x y w h r g b\n  drawLine x y (x+w) y r g b\n  drawLine (x+w) y (x+w) (y+h) r g b\n  drawLine (x+w) (y+h) x (y+h) r g b\n  drawLine x (y+h) x y r g b\nend",
+          "permissions": { "admin": 3, "user": 3, "all": 3 }
+        },
+        "gamelib.zs": {
+          "type": "file",
+          "name": "gamelib.zs",
+          "created": "2025-06-06T12:01:20Z",
+          "modified": "2025-06-06T12:01:20Z",
+          "size": 300,
+          "content": "# gamelib.zs - Game helpers for ZSL (uses mathlib and gfxlib)\n\nimport \"zslang/mathlib.zs\"\nimport \"zslang/gfxlib.zs\"\n\nfunc drawPlayer x y\n  gfx.drawCircle x y 10 0 255 0\n  drawFrame (x-10) (y-10) 20 20 0 200 0\nend\n\nfunc drawEnemy x y\n  gfx.drawRect x y 16 16 255 0 0\n  drawFrame x y 16 16 100 0 0\nend\n\nfunc randomColor n\n  return mod(n * 77, 255)\nend\n\nfunc drawScore score\n  drawTextColor \"Score: \" + score 10 20 255 255 0\nend\n\nfunc drawHealth hp\n  drawTextColor \"HP: \" + hp 10 40 255 100 100\nend\n\nfunc drawGameOver\n  drawTextColor \"GAME OVER\" 100 120 255 0 0\nend\n\nfunc drawWin\n  drawTextColor \"YOU WIN!\" 100 120 0 255 0\nend",
+          "permissions": { "admin": 3, "user": 3, "all": 3 }
+        }
+      }
+    },
+    "examples": {
+      "type": "dir",
+      "name": "examples",
+      "created": "2025-06-06T12:02:00Z",
+      "modified": "2025-06-06T12:02:00Z",
+      "permissions": { "admin": 3, "user": 3, "all": 3 },
+      "children": {
+        "fibonacci.zs": {
+          "type": "file",
+          "name": "fibonacci.zs",
+          "created": "2025-06-06T12:02:10Z",
+          "modified": "2025-06-06T12:02:10Z",
+          "size": 180,
+          "content": "# Example: Fibonacci sequence\nfunc fib n\n  if n <= 1\n    return n\n  end\n  return fib(n-1) + fib(n-2)\nend\n\nfor i = 0 to 10\n  print fib(i)\nend",
+          "permissions": { "admin": 3, "user": 3, "all": 3 }
+        },
+        "colorgrid.zs": {
+          "type": "file",
+          "name": "colorgrid.zs",
+          "created": "2025-06-06T12:02:20Z",
+          "modified": "2025-06-06T12:02:20Z",
+          "size": 120,
+          "content": "# Example: Colorful grid\ngfx.clear 0 0 0\nfor x = 0 to 50\n  for y = 0 to 50\n    gfx.setPixel x y (x*5)%255 (y*5)%255 ((x+y)*2)%255\n  end\nend",
+          "permissions": { "admin": 3, "user": 3, "all": 3 }
+        },
+        "game_demo.zs": {
+          "type": "file",
+          "name": "game_demo.zs",
+          "created": "2025-06-06T12:02:30Z",
+          "modified": "2025-06-06T12:02:30Z",
+          "size": 180,
+          "content": "# Example: Use gamelib to draw player and enemy\nimport \"zslang/gamelib.zs\"\nclearScreen\nlet px = 80\nlet py = 80\nlet ex = 200\nlet ey = 120\ndrawPlayer px py\ndrawEnemy ex ey\ndrawScore 42\ndrawHealth 7",
+          "permissions": { "admin": 3, "user": 3, "all": 3 }
+        }
+      }
+    }
+  }
+}

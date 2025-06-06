@@ -1,0 +1,104 @@
+#zeroshell-editor-modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  min-width: 320px;
+  min-height: 180px;
+  max-width: 90vw;
+  max-height: 80vh;
+  background: #111;
+  color: #00ff44;
+  border: 2px solid #00ff44;
+  border-radius: 10px;
+  box-shadow: 0 0 24px #00ff44cc, 0 0 0 100vw rgba(0,0,0,0.45);
+  z-index: 10001;
+  display: none;
+  flex-direction: column;
+  padding: 0;
+  cursor: default;
+  animation: editorFadeIn 0.18s;
+  resize: both;
+  overflow: auto;
+}
+
+@keyframes editorFadeIn {
+  from { opacity: 0; transform: translate(-50%,-60%);}
+  to   { opacity: 1; transform: translate(-50%,-50%);}
+}
+
+#zeroshell-editor-modal textarea:focus {
+  border: 1.5px solid #00ff44;
+  background: #101;
+}
+
+#zeroshell-editor-modal button:focus {
+  outline: 2px solid #00ff44;
+}
+
+#zeroshell-editor-modal .editor-header {
+  padding: 10px 16px;
+  background: #181;
+  border-radius: 10px 10px 0 0;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  cursor: move;
+  user-select: none;
+}
+
+#zeroshell-editor-modal .editor-header span {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#zeroshell-editor-modal textarea {
+  flex: 1;
+  width: 98%;
+  min-height: 120px;
+  margin: 10px 1%;
+  background: #181;
+  color: #33ff33;
+  border: none;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1em;
+  resize: vertical;
+  outline: none;
+  box-sizing: border-box;
+}
+
+#zeroshell-editor-modal .editor-footer {
+  padding: 8px 16px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+#zeroshell-editor-modal button {
+  background: #00ff44;
+  color: #000;
+  font-weight: bold;
+  padding: 4px 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+#zeroshell-editor-modal button#editor-cancel {
+  background: #222;
+  color: #fff;
+}
+
+#zeroshell-editor-modal button#editor-close {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2em;
+  cursor: pointer;
+  padding: 0 8px;
+}

@@ -1,0 +1,328 @@
+/* styles/terminal.css */
+
+/* Container */
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+#cli-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000 url('https://www.transparenttextures.com/patterns/dark-mosaic.png') repeat;
+  padding: 40px;
+  user-select: none;
+}
+
+/* Terminal Window: flat background with subtle border */
+#terminal {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  height: 650px;
+  background: #0a0a0a;
+  border-radius: 12px;
+  border: 1px solid #00ff44cc;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: 'Share Tech Mono', monospace;
+  color: #33ff33;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Terminal Output area: scrollable with padding and smooth scrollbar */
+#terminal-output {
+  flex-grow: 1;
+  padding: 20px 25px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  scrollbar-width: thin;
+  scrollbar-color: #00ff44 #001100;
+  font-weight: 500;
+  user-select: text;
+}
+
+/* Scrollbar styles for Webkit browsers */
+#terminal-output::-webkit-scrollbar {
+  width: 8px;
+}
+
+#terminal-output::-webkit-scrollbar-track {
+  background: #001100;
+  border-radius: 6px;
+}
+
+#terminal-output::-webkit-scrollbar-thumb {
+  background-color: #00ff44cc;
+  border-radius: 6px;
+  border: 1.5px solid #001100;
+}
+
+/* Input line container */
+#cli-input {
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+  border-top: 1px solid #00ff44cc;
+  background: transparent;
+}
+
+/* Prompt styling */
+.prompt {
+  color: #00ff44;
+  font-weight: 900;
+  margin-right: 12px;
+  user-select: none;
+  text-shadow: none;
+  letter-spacing: 1px;
+  font-size: 1.1em;
+}
+
+/* Command input styling */
+#command-input {
+  flex-grow: 1;
+  background: transparent;
+  border: none;
+  color: #33ff33;
+  font-family: inherit;
+  font-size: 1.15rem;
+  caret-color: #00ff44;
+  outline: none;
+  border-right: none;
+  animation: none;
+}
+
+/* Echoed input line styling */
+.terminal-input-line {
+  color: #00ff44;
+  font-weight: bold;
+  font-family: inherit;
+  margin-bottom: 2px;
+}
+
+/* Spacing for output lines */
+#terminal-output > div {
+  margin-bottom: 4px;
+  line-height: 1.6;
+}
+
+/* Selection highlight */
+#terminal-output ::selection,
+#command-input::selection {
+  background: #00ff44aa;
+  color: #000;
+}
+
+/* Remove flicker overlay */
+#terminal::before {
+  content: none;
+}
+
+/* Boot Screen styles */
+#boot-screen {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #00ff44;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  transition: opacity 0.7s;
+  opacity: 1;
+  pointer-events: all;
+  overflow: hidden;
+}
+
+#boot-screen.hide {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.7s;
+}
+
+.boot-logo {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+  letter-spacing: 6px;
+  color: #00ff44;
+  text-shadow: 0 0 8px #00ff44cc;
+  animation: bootLogoPulse 1.2s infinite alternate;
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes bootLogoPulse {
+  0% { text-shadow: 0 0 8px #00ff44cc; }
+  100% { text-shadow: 0 0 18px #00ff44; }
+}
+
+.boot-glitch {
+  position: absolute;
+  left: 50%;
+  top: 18%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 60px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.12;
+  background: repeating-linear-gradient(
+    0deg,
+    #00ff44 0px,
+    #00ff44 2px,
+    transparent 2px,
+    transparent 6px
+  );
+  animation: glitchMove 1.2s infinite linear;
+}
+
+@keyframes glitchMove {
+  0% { transform: translateX(-50%) translateY(0); }
+  100% { transform: translateX(-50%) translateY(20px); }
+}
+
+.boot-loader {
+  margin-top: 1.2rem;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  color: #33ff33;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.boot-bar-container {
+  width: 260px;
+  height: 12px;
+  background: #111;
+  border-radius: 6px;
+  margin: 18px 0 8px 0;
+  overflow: hidden;
+  border: 1px solid #00ff44;
+}
+
+.boot-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #00ff44 60%, #33ff33 100%);
+  border-radius: 6px;
+  transition: width 0.3s;
+}
+
+.boot-analyzing {
+  font-size: 1.05rem;
+  color: #00ff44;
+  margin-top: 8px;
+  letter-spacing: 1px;
+  animation: analyzingBlink 1.2s infinite alternate;
+  font-weight: bold;
+}
+
+@keyframes analyzingBlink {
+  0% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+.boot-file {
+  font-size: 0.98rem;
+  color: #33ff33;
+  margin-top: 6px;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+.boot-stats {
+  color: #33ff33;
+  font-size: 0.98rem;
+  margin-top: 8px;
+  font-family: inherit;
+  letter-spacing: 1px;
+  opacity: 0.85;
+  text-align: left;
+  width: 220px;
+  background: rgba(0,32,0,0.10);
+  border-radius: 4px;
+  padding: 4px 10px;
+}
+
+.shutdown-msg {
+  font-size: 1.2rem;
+  color: #ff4444;
+  margin-top: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px #ff4444cc;
+  animation: shutdownFade 1.2s infinite alternate;
+}
+
+@keyframes shutdownFade {
+  0% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+.shutdown-bar-container {
+  width: 220px;
+  height: 12px;
+  background: #222;
+  border-radius: 6px;
+  margin: 18px 0 8px 0;
+  overflow: hidden;
+  border: 1px solid #ff4444;
+}
+
+.shutdown-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #ff4444 60%, #ff8888 100%);
+  border-radius: 6px;
+  transition: width 0.3s;
+}
+
+/* Tab Completion Dropdown styles */
+#tab-dropdown {
+  background: #181;
+  color: #00ff44;
+  border: 1.5px solid #00ff44;
+  border-radius: 6px;
+  min-width: 120px;
+  max-width: 340px;
+  max-height: 180px;
+  overflow-y: auto;
+  box-shadow: 0 2px 16px #000a;
+  font-family: inherit;
+  font-size: 1em;
+  margin-top: 4px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  outline: none;
+}
+
+.tab-dropdown-item {
+  padding: 6px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.12s;
+}
+
+.tab-dropdown-item.selected,
+.tab-dropdown-item:focus {
+  background: #00ff44;
+  color: #111;
+  outline: none;
+}
+
+.tab-dropdown-item.dir {
+  font-weight: bold;
+  color: #00ff44;
+}
+
+.tab-dropdown-item.file {
+  color: #33ff33;
+}

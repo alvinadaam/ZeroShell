@@ -1,0 +1,41 @@
+const help = function(args, shellState, vfsManager) {
+  return [
+    'Available commands:',
+    'ls               - List folders (with /) and files in the current directory',
+    'ls --m [name]    - Show metadata for a file or folder',
+    'stat [name]      - Show all metadata (including permissions) for a file or folder',
+    'cd [dir]         - Change current directory',
+    'cat [file]       - Show contents of a file (shows (empty file) if empty)',
+    'edit [file]      - Edit a file in a popup editor (if you have write permission)',
+    'clear            - Clear the terminal output',
+    'mkdir [dir]      - Create a new directory (use quotes for spaces)',
+    'touch [file]     - Create a new file (with metadata) or update modified time (use quotes for spaces)',
+    'rm [file]        - Remove a file',
+    'rmdir [dir]      - Remove an empty directory',
+    'mv [src] [dest]  - Rename or move a file or directory',
+    'cp [src] [dest]  - Copy a file',
+    'find [name]      - Find files or directories by name',
+    'chmod [role] [value] [file/dir] - Set permission (1=write, 3=read, 5=execute) for admin/user/all (recursive for dirs)',
+    'tree             - Show directory tree from current location',
+    'pwd              - Show current directory path',
+    'history          - Show command history',
+    'whoami           - Show current user',
+    'su [role]        - Switch user role (admin, user, all)',
+    'shutdown         - Show animated shutdown screen and disable CLI',
+    'help             - Show this help message',
+    'run [file.zs]     - Run a ZSL program file',
+    'view [file]       - Preview a file in a popup viewer (supports images and text)',
+    'genimg [name.png] - Generate a random PNG image file',
+    'file [file]       - Show file type and size',
+    'upload            - Upload a file from your computer to the VFS',
+    'download [file]   - Download a file from the VFS to your computer',
+    '',
+    'Aliases: dir = ls, md = mkdir',
+    'Use ↑/↓ arrows for command history.',
+    'Prompt shows your current directory.',
+    'Enjoy the animated boot and shutdown screens!',
+    'zslstudio        - Open the ZSL Studio IDE window'
+  ].join('\n');
+};
+
+export default help;

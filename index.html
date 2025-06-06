@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZeroShell</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/terminal.css">
+    <link rel="stylesheet" href="styles/editor.css">
+</head>
+
+<body>
+    <div id="boot-screen"></div>
+    <div id="cli-container">
+        <div id="terminal">
+            <div id="terminal-output"></div>
+            <div id="cli-input">
+                <span class="prompt">zero@cli:~$</span>
+                <input type="text" id="command-input" autocomplete="off" spellcheck="false" autofocus aria-label="Command line" />
+                <div id="tab-dropdown" style="display:none; position:absolute; z-index:10002;"></div>
+            </div>
+        </div>
+        <canvas id="gfx-canvas" width="320" height="240" style="display:none; margin:24px auto 0 auto; border:2px solid #00ff44; background:#111; border-radius:8px; box-shadow:0 0 16px #00ff44cc;"></canvas>
+    </div>
+    <script type="module" src="scripts/ui/editor.js"></script>
+    <script type="module" src="scripts/ui/viewer.js"></script>
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/ui/gfx.js"></script>
+</body>
+
+</html>
