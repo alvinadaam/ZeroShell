@@ -88,35 +88,60 @@ gfxlib.drawText "Hello GFXLib!" 60 140
 
 ---
 
-## 🧑‍💻 ZSL Studio: The ZeroShell IDE
+## 📦 Project Structure
 
-- Launch with: `zslstudio`
-- Floating, resizable, closable window above the shell
-- Multi-tab support (open multiple files, switch tabs)
-- Simple syntax highlighting (keywords, numbers, strings)
-- Open/save files, create new files, and run code directly from the IDE
-- Run code in the shell and graphics canvas while the IDE is open
-- Keyboard shortcuts: <kbd>Ctrl+S</kbd> (save), <kbd>Ctrl+Enter</kbd> (run), <kbd>Ctrl+W</kbd> (close tab), <kbd>Ctrl+N</kbd> (new file)
-- All IDE code is organized in `scripts/ide/`
-- Future: Expand with advanced features (auto-complete, docs, drag-and-drop, etc.)
-
-**How to test:**
-1. In the shell, type `zslstudio` and press Enter.
-2. The ZSL Studio window will appear.
-3. Use "Open" to select a `.zs` file, or "New" to create a new one.
-4. Edit your code, switch tabs, and click "Run" to execute ZSL code (output appears in the shell/graphics).
-5. Use keyboard shortcuts for efficiency.
-6. Close the IDE window when done.
+- **`index.html`** - The main HTML file to launch ZeroShell.
+- **`/scripts`** - Contains all the JavaScript, HTML, and CSS files for ZeroShell.
+  - **`/commands`** - Custom commands for the shell.
+  - **`/ide`** - Code for the ZSL Studio IDE.
+  - **`/tools`** - Compiler and language tools.
+  - **`/ui`** - User interface components.
+  - **`/zslang`** - ZSL libraries and frameworks.
+- **`/assets`** - Images, icons, and other assets.
+- **`/docs`** - Documentation and project notes.
+- **`/tests`** - Automated tests for ZeroShell.
 
 ---
 
-## 🛠️ Extending ZeroShell
+## 🧑‍💻 Authors & License
 
-- Add new commands in `scripts/commands/base` or `scripts/commands/special`.
-- Add new language features in `scripts/tools/compilerEngine.js`.
-- Add new UI features in `scripts/ui/` or `scripts/ide/`.
-- Build and share ZSL libraries and frameworks in `scripts/zslang/`.
+- **Author:** Adam Baqili (aka alvinadaam)
+- **GitHub:** [alvinadaam](https://github.com/alvinadaam)
+- **Copyright:** © 2023-2024 Adam Baqili
+- **License:** MIT License
 
 ---
 
-## 📄 See `status.md` for live project status, feedback, and next steps!
+## 📝 Wiki & Documentation
+
+For detailed documentation, tutorials, and examples, visit the [ZeroShell Wiki](https://github.com/alvinadaam/ZeroShell/wiki).
+
+---
+
+## 📢 Legal & Usage
+
+ZeroShell is free and open-source software released under the MIT License.  
+You may use, modify, and distribute this project for personal, educational, or commercial purposes, provided you retain the copyright notice.
+
+---
+
+## 🌐 Hosting & Deployment
+
+- ZeroShell is fully client-side and can be hosted on any static web server or GitHub Pages.
+- To deploy:
+  1. Clone or download this repository.
+  2. Open `index.html` in your browser, or upload the project to your web host.
+  3. For GitHub Pages, push to your repo and enable Pages in repo settings.
+
+---
+
+## 🤝 Contributing
+
+Pull requests, issues, and suggestions are welcome!  
+See `CONTRIBUTING.md` (if present) or open an issue on GitHub.
+
+---
+
+## ⭐️ Star & Share
+
+If you like ZeroShell, please star the repo and share it with others!

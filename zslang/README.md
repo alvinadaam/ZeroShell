@@ -3,7 +3,14 @@ ZeroShell Simple Language (ZSL)
 
 ZSL is a modern, extensible scripting language for ZeroShell, designed for automation, learning, games, and creative coding.
 
--------------------------------------------------------------------------------
+---
+
+**Author:** Adam Baqili (aka alvinadaam)  
+**GitHub:** [alvinadaam](https://github.com/alvinadaam)  
+**License:** MIT License  
+**Copyright:** © 2023-2024 Adam Baqili
+
+---
 
 Core Features
 ------------
