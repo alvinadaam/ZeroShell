@@ -92,33 +92,45 @@ Core Features
   - Read, write, and manage files and directories from ZSL.
 
 - **Async Tasks / Background Jobs:**  
-  - (In Progress) You will be able to run scripts or commands in the background using a `background` or `async` keyword.
-  - Example (planned):
-    ```
-    async run long_task.zs
-    background print "Working in the background"
-    ```
-  - Background jobs will not block the shell and can be managed or listed.
+  - You can now run scripts or commands in the background using `async run myscript.zs` or `background print "..."`.
+  - List jobs with `jobs`.
+  - Background jobs do not block the shell and can be managed.
 
 - **Events and Hooks:**  
-  - (In Progress) ZSL will support responding to system or user events.
-  - Example (planned):
+  - ZSL supports responding to system or user events.
+  - Define event hooks with:
     ```
     on event "file_created"
       print "A file was created!"
     end
 
-    on event "shell_start"
-      print "Welcome to ZeroShell!"
-    end
+    trigger file_created
     ```
-  - You will be able to define custom hooks for file changes, shell events, or user actions.
+  - You can define custom hooks for file changes, shell events, or user actions.
 
 - **Data Structures:**  
   - Arrays, (planned: maps/objects), easy manipulation.
 
 - **Custom Command System:**  
-  - (Planned) Define your own shell commands in ZSL.
+  - You can define your own shell commands in ZSL that are available globally (persisted in the VFS as `.zscmd` files).
+  - Custom commands are hot-reloadable: editing or saving a `.zscmd` file updates the command instantly.
+  - **Syntax:**
+    ```
+    command greet [name]
+      print "Hello, " + name
+    end
+    ```
+    - `command <name> [args...] ... end`
+    - Arguments are optional and accessible as variables inside the command body.
+  - Custom commands support arguments, piping, and chaining like built-in commands.
+  - Commands can call other commands or ZSL code.
+  - Commands interact with the VFS and environment via built-in ZSL libraries (e.g. `vfs.read`, `vfs.write`).
+  - Command conflicts: user-defined commands override built-ins only if explicitly allowed (with a warning or prompt).
+  - **Listing/documentation:**
+    - `help --u` lists user-defined commands.
+    - `help --s` lists system/built-in commands.
+    - Each command can have a docstring or comment at the top for help output.
+  - Aliases, macros, and advanced chaining can be implemented as ZSL libraries.
 
 - **Scripting & Compilation Mode:**  
   - (Planned) Run interactively or compile scripts for performance.
@@ -180,22 +192,6 @@ Libraries & Frameworks
 - Import libraries in your scripts with `import "zslang/gfxlib.zs"`
 
 -------------------------------------------------------------------------------
-
-Advanced Features (Planned / In Progress)
------------------------------------------
-
-- Async/background jobs
-- Events and hooks
-- Custom command system
-- Compilation mode
-- More data structures (maps, sets, etc.)
-- More frameworks (UI, networking, etc.)
-
--------------------------------------------------------------------------------
-
-See the main README for more details, and explore the examples and libraries in this folder!
-
----
 
 - The ZSLang README.md accurately documents all current features, syntax, and planned extensions.
 - Author, license, and GitHub info are included.
