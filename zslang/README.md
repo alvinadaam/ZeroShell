@@ -26,25 +26,42 @@ zslang/
     utils.js         # Utility functions (planned)
   tests/
     ...              # ZSLang unit tests and script samples
+  scripts/
+    zslang/
+      mathlib.zs     # Math library (ZSLang)
+      stringlib.zs   # String library (ZSLang)
+      arraylib.zs    # Array library (ZSLang)
+      gfxlib.zs      # Graphics library (ZSLang)
 ```
 
 ---
 
-## ✅ Minimal Working Example
+## 🏗️ High-Level Design
 
-- Only `print` statements are supported for now.
-- Example:
-  ```
-  print "Hello, ZeroShell!"
-  ```
-
----
-
-## Next Steps
-
-- Expand parser and interpreter for variables, math, control flow, etc.
-- Add tests and documentation as features are added.
+- **Goal:**  
+  ZSLang is a simple, readable, and extensible scripting language for ZeroShell, designed for automation, learning, and creative coding.
+- **Philosophy:**  
+  - Minimal, clear syntax (inspired by Python/BASIC).
+  - One statement per line, no semicolons.
+  - Easy to extend with new features and libraries.
+  - Tight integration with ZeroShell's CLI, VFS, and graphics.
 
 ---
 
-**Stay tuned for the next generation of ZSLang!**
+## 🔬 Low-Level Architecture
+
+- **Parser:**  
+  - Converts code into tokens and lines.
+  - Will support expressions, variables, control flow, and function definitions.
+- **Interpreter:**  
+  - Executes parsed code line by line.
+  - Handles built-in statements (print, let, if, for, etc.).
+  - Calls standard library functions from `stdlib/` and `.zs` libraries from VFS.
+- **AST (planned):**  
+  - For more advanced features, an AST will be used for parsing and execution.
+- **Runtime:**  
+  - Manages variable scope, environment, and execution context.
+- **Error Handling:**  
+  - Graceful error messages, no crashes.
+- **Extensibility:**  
+  - Add new built-ins and libraries by dropping files in `stdlib/` or `scripts/zslang/`.

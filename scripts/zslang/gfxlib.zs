@@ -1,10 +1,10 @@
-# gfxlib.zs - Optimized graphics helpers for ZSL
+# gfxlib.zs - Graphics helpers for ZSLang
 
 func clear r g b
   gfx.clear r g b
 end
 
-func drawBox x y w h r g b
+func drawRect x y w h r g b
   gfx.drawRect x y w h r g b
 end
 

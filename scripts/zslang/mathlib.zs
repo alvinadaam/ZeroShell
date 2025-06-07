@@ -1,4 +1,4 @@
-# mathlib.zs - Advanced math helpers for ZSL
+# mathlib.zs - Essential math utilities for ZSLang
 
 func add a b
   return a + b
@@ -23,6 +23,13 @@ func mod a b
   return a % b
 end
 
+func abs x
+  if x < 0
+    return 0 - x
+  end
+  return x
+end
+
 func max a b
   if a > b
     return a
@@ -35,13 +42,6 @@ func min a b
     return a
   end
   return b
-end
-
-func abs x
-  if x < 0
-    return 0 - x
-  end
-  return x
 end
 
 func pow a b
@@ -64,10 +64,6 @@ end
 
 func avg a b
   return (a + b) / 2
-end
-
-func lerp a b t
-  return a + (b - a) * t
 end
 
 func sign x
